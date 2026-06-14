@@ -13,6 +13,18 @@ pipeline {
                 sh 'mvn -version'
             }
         }
+        stage('Create-Workspace'){
+            steps {
+                echo 'creating workspace'
+                sh 'ls -lrth /var/lib/jenkins'
+            }
+        }
+        stage('clone-repo'){
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/JnanaDevops/jnana-jenkins-demo-app.git'
+            }
+        }
         stage('Build'){
             steps {
                 // Get some code from a Gitea repo
