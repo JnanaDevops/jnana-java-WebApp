@@ -39,10 +39,10 @@ pipeline {
                 sh "mvn test"
             }
         }
-        stage('Docker build') {
+        /*stage('Docker build') {
             steps {
                 sh 'docker build -t jnana-java-webapp:latest .'
             }
-        }
+        }*/
     }
 }
