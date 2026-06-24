@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'build-node'
-    }
+    agent any
 
    // tools {
         // Install the maven version configured as "M3" and add it to the path.
